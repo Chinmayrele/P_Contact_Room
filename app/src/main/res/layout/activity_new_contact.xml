@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewContact">
+
+
+    <EditText
+        android:id="@+id/enter_name"
+        style="@style/formStyle"
+        android:autofillHints=""
+        android:hint="@string/name_hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <EditText
+        android:id="@+id/enter_occupation"
+        style="@style/formStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/occupation_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_name" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/button_margin"
+        android:layout_marginTop="48dp"
+        android:padding="@dimen/gen_padding_button"
+        android:text="@string/save_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_occupation"
+        app:layout_constraintVertical_bias="0.245" />
+
+    <ImageButton
+        android:id="@+id/update_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:backgroundTint="#CC4B4B"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_button"
+        android:contentDescription="@string/update_button_icon"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:background="@android:drawable/ic_menu_delete"
+        app:iconTint="#4A8F3A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/update_button"
+        app:layout_constraintTop_toBottomOf="@+id/save_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
